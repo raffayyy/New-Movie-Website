@@ -2,5 +2,234 @@
   position: relative;
   margin: 0;
   padding: 0;
-  color:#f8cd21;
+  font-family: Poppins;
+}
+body{
+  background-image: url('assets/spiderman-nwh.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+body:after {
+  display: block;
+  position: absolute;
+  background-image: linear-gradient(to left , rgba(255, 255, 255, 0) 0, #000 100%);
+  /* background-image: linear-gradient(to top, rgba(255, 255, 255, 0) 0, #000 100%); */
+  /* background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0, #000 100%); */
+  
+  content: '';
+  top:0;
+  right:0;
+  bottom:0;
+  left:0;
+  opacity: 0.8;
+  z-index: -1;
+}
+.navbar{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem;
+  padding-right: 3rem;
+  border:0px;
+  background-image: linear-gradient(to top , rgba(0, 0, 0, 0) 0, #37363615 100%);
+
+}
+.logo{
+  display: flex;
+  align-items: center;
+  padding-left: 5rem;
+
+}
+.logo-new{
+  color: black;
+  background-color: #f8cd21;
+  padding: 0.5rem;
+  font-weight: 700;
+  font-size: 1rem;
+  border-radius: 0.5rem;
+}
+.logo-movie{
+  color: #f8cd21;
+  padding: 0.5rem;
+  font-weight: 700;
+  font-size: 1rem;
+  border-radius: 0.2rem;
+}
+
+.nav-links{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.nav-links a{
+  text-decoration: none;
+  color: white;
+  padding: 0.5rem;
+}
+.nav-links a:hover{
+  color: #f8cd21;
+}
+.nav-links p{
+ color: white;
+  padding: 0.5rem;
+}
+.links:after {
+	content: '';
+	display: block;
+	margin: auto;
+	height: 3px;
+	width: 0px;
+	background: transparent;
+	transition: width .5s ease, background-color .5s ease;
+}
+.links:hover:after {
+	width: 100%;
+	background: #f8cd21;
+}
+.search{
+  padding-top:5px;
+}
+.search span{
+  padding: 0.5rem;
+}
+
+.hero-container{
+  margin-top: 1rem ;
+  margin-left: 3rem;
+  max-width: 40%;
+  position: relative;
+  border-radius: 0.5rem;
+}
+.heading{
+  font-size: 2rem;
+  font-weight: 400;
+  color: white;
+
+}
+.IMDb{
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: black;
+  background-color: #f8cd21;
+  border-radius: 0.5rem;
+  padding: 0.3rem;
+}
+.content-ratings{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem;
+  padding-left: 0;
+  max-width: 80%;
+}
+.ratings{
+  display:flex;
+}
+.about{
+  color: white;
+}
+.rated{
+  color: white;
+}
+.by{
+  color: lightgray;
+}
+.content{
+  color: white;
+}
+.content a{
+  text-decoration: none;
+  color: #f8cd21;
+}
+.content a:hover{
+  color: #f7d758;
+}
+.buttons{
+  padding: 1rem;
+  display: flex;
+  max-width: 60%;
+  justify-content: space-around;
+}
+.trailer{
+    font-size: 1rem;
+    padding: 1rem;
+    border-radius:0.5rem;
+    background-color: transparent;
+    border: 1px solid white;
+    color: white;
+
+}
+.trailer:hover{
+  color: #f8cd21;
+}
+.watch-now{
+  font-size: 1rem;
+  font-weight: 700;
+  background-color: #f8cd21;
+  align-items: center;
+  padding: 1rem;
+  display: flex;
+  border-radius:0.5rem;
+  border: 0px;
+}
+.watch-now p{
+  padding-left: 0.5rem;
+}
+.watch-now:hover {
+  color: white;
+  background-color: #f7d758;
+}
+
+.moving-icons{
+  display: flex;
+  max-width: 7%;
+  margin-left: 4rem;
+  margin-top: 1rem;
+  padding: 0.5rem;
+  justify-content: space-around;
+  align-items: center;
+}
+.moving-icons span{
+  padding: 0.5rem;
+}
+.moving-icons div{
+  border: 1px solid white;
+  border-radius: 0.5rem;
+}
+.moving-icons a{
+  color: white;
+}
+.moving-icons a:hover{
+  color: #f8cd21;
+}
+
+.movies-flex-container{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 1rem;
+  margin-top: 0.5rem;
+  position: relative;
+  padding-bottom: 0;
+  background-image: linear-gradient(to bottom , rgba(0, 0, 0, 0) 0, #37363615 100%);
+  padding-bottom: 5rem;
+
+}
+.movies-card{
+  height: 11rem;
+  width: 9rem;
+  opacity: 0.7;
+}
+.movies-card:hover{
+  transform: scale(1.2);
+  opacity: 1;
+}
+.movies-card img{
+  height: 100%;
+  width: 100%;
+  border-radius: 0.5rem;
+  object-fit: cover;
+  object-position: center;
+  transition: 0.5s ease;
 }
