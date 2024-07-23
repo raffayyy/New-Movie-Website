@@ -194,27 +194,29 @@ body:after {
   padding: 0.5rem;
 }
 .moving-icons div{
-  border: 1px solid white;
+  border: 1px solid transparent;
   border-radius: 0.5rem;
 }
-.moving-icons a{
+.moving-icons button{
   color: white;
+  background-color: transparent;
+  border: 0;
 }
-.moving-icons a:hover{
+.moving-icons button:hover{
   color: #f8cd21;
 }
 
 .movies-flex-container{
   display: flex;
-  justify-content: space-around;
+  /* justify-content: space-evenly; */
+  overflow-x: auto;
   align-items: center;
-  padding: 1rem;
   margin-top: 0.5rem;
   position: relative;
   padding-bottom: 0;
   background-image: linear-gradient(to bottom , rgba(0, 0, 0, 0) 0, #37363615 100%);
   padding-bottom: 5rem;
-
+  width: 100%;
 }
 .movies-card{
   height: 11rem;

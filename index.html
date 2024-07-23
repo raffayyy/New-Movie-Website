@@ -79,20 +79,95 @@
 
     <div class="moving-icons">
       <div>
-        <a href="#"><span class="material-symbols-outlined"> chevron_left </span></a>
+        <button class="goingleft">
+          <span class="material-symbols-outlined"> chevron_left </span>
+        </button>
       </div>
       <div>
-        <a href="#"><span class="material-symbols-outlined"> chevron_right </span></a>
+        <button class="goingright">
+          <span class="material-symbols-outlined"> chevron_right </span>
+        </button>
       </div>
     </div>
 
     <div class="movies-flex-container">
-      <a href=""><div class="movies-card"><img src="assets/avengers-eg.jpg" alt="avengers endgame"></div></a>
-      <a href=""><div class="movies-card"><img src="assets/avenger-iw.jpg" alt="avengers infinity wars"></div></a>
-      <a href=""><div class="movies-card"><img src="assets/spiderman-homecoming.jpg" alt="spiderman-homecoming"></div></a>
-      <a href=""><div class="movies-card"><img src="assets/spiderman-nwh.jpg" alt="spider-man"></div></a>
-      <a href=""><div class="movies-card"><img src="assets/Xmen-days.jpg" alt="Xmen-days"></div></a>
-      <a href=""><div class="movies-card"><img src="assets/Xmen.jpeg" alt="Xmen"></div></a>
+      <a href=""
+        ><div class="movies-card">
+          <img src="assets/avengers-eg.jpg" alt="avengers endgame" /></div
+      ></a>
+      <a href=""
+        ><div class="movies-card">
+          <img src="assets/avenger-iw.jpg" alt="avengers infinity wars" /></div
+      ></a>
+      <a href=""
+        ><div class="movies-card">
+          <img
+            src="assets/spiderman-homecoming.jpg"
+            alt="spiderman-homecoming"
+          /></div
+      ></a>
+      <a href=""
+        ><div class="movies-card">
+          <img src="assets/spiderman-nwh.jpg" alt="spider-man" /></div
+      ></a>
+      <a href=""
+        ><div class="movies-card">
+          <img src="assets/Xmen-days.jpg" alt="Xmen-days" /></div
+      ></a>
+      <a href=""
+        ><div class="movies-card"><img src="assets/Xmen.jpeg" alt="Xmen" /></div
+      ></a>
+      <a href=""
+        ><div class="movies-card"><img src="assets/Xmen.jpeg" alt="Xmen" /></div
+      ></a>
+      <a href=""
+        ><div class="movies-card"><img src="assets/Xmen.jpeg" alt="Xmen" /></div
+      ></a>
+      <a href=""
+        ><div class="movies-card"><img src="assets/Xmen.jpeg" alt="Xmen" /></div
+      ></a>
+      <a href=""
+        ><div class="movies-card">
+          <img src="assets/Xmen.jpeg" alt="Xmen" /></div></a
+      ><a href=""
+        ><div class="movies-card">
+          <img src="assets/Xmen.jpeg" alt="Xmen" /></div></a
+      ><a href=""
+        ><div class="movies-card">
+          <img src="assets/Xmen.jpeg" alt="Xmen" /></div></a
+      ><a href=""
+        ><div class="movies-card">
+          <img src="assets/Xmen.jpeg" alt="Xmen" /></div></a
+      ><a href=""
+        ><div class="movies-card"><img src="assets/Xmen.jpeg" alt="Xmen" /></div
+      ></a>
     </div>
   </body>
 </html>
+<script>
+  const moviesContainer = document.querySelector(".movies-flex-container");
+  const goingLeftBtn = document.querySelector(".goingleft");
+  const goingRightBtn = document.querySelector(".goingright");
+
+  let currentPosition = 0;
+  const slideWidth = 225;
+
+  goingLeftBtn.addEventListener("click", () => {
+    currentPosition -= slideWidth;
+    if (currentPosition < 0) currentPosition = 0;
+    moviesContainer.scrollTo({ left: currentPosition, behavior: "smooth" });
+  });
+
+  goingRightBtn.addEventListener("click", () => {
+    currentPosition += slideWidth;
+    if (
+      currentPosition >
+      moviesContainer.scrollWidth - moviesContainer.clientWidth
+    ) {
+      currentPosition =
+        moviesContainer.scrollWidth - moviesContainer.clientWidth;
+      console.log(moviesContainer.scrollWidth, moviesContainer.clientWidth);
+    }
+    moviesContainer.scrollTo({ left: currentPosition, behavior: "smooth" });
+  });
+</script>
